@@ -2,14 +2,14 @@ FORMAT: 1A
 
 # PMO_Msia
 
-API to get information on law, politicians, government of Malaysia.
+API to get information on law, politicians, government of Malaysia.  
 The end goal of this project is to enable people to build apps related to the administration
 
 # PMO API Root [/]
 
 The top level ..
 
-# Group Party
+# Group Party 
 
 Resources related to Political parties ..
 
@@ -19,8 +19,36 @@ Resources related to Political parties ..
 
 + Response 200 (application/json)
 
-[
-    {
-        "url": "/parties/DAP"
-    }
-]
+        [
+            {
+                "resource": "/parties/DAP/1"
+            },
+            {
+                "resource": "/parties/PKR/2"
+            }
+        ]
+
+# Group Postcode
+
+Resources related to postcode ..
+
+## Postcode By State By Poastcode [/postcode/{state}/{num_postcode}]
+
+### List All Postcode By State By Postcode [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "location":"Abang Galau",
+                "postcode":"97000",
+                "postOffice":"Bintulu",
+                "state":"Sarawak"
+            }, 
+            {
+                "location":"Pantu",
+                "postcode":"95000",
+                "postOffice":"Sri Aman",
+                "state":"Sarawak"
+            }
+        ]
